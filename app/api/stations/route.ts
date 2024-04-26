@@ -7,7 +7,7 @@ export const GET = async (req:Request, res: Response) => {
 
     try {
         const stations = getStations();
-        return  NextResponse.json({ message: 'OK', stations}, {status:200})
+        return  NextResponse.json({stations})
 
     } catch (error) {
         return NextResponse.json({message : 'Eroor', error}, {status: 500})
